@@ -45,13 +45,13 @@ function draw() {
             
             if (objects[i].label == objectName) {
                 video.stop(); objectDetector.detect(gotResult);
-                document.getElementById("objectStatus").innerHTML = objectName + " Encontrado";
+                document.getElementById("objectsStatus").innerHTML = objectName + " Encontrado";
                 synth = window.speechSynthesis;
                 utterThis = new SpeechSynthesisUtterance(objectName + " Encontrado");
                 synth.speak(utterThis);
             }
             else {
-                document.getElementById("objectStatus").innerHTML = objectName + " Não Encontrado";
+                document.getElementById("objectsStatus").innerHTML = objectName + " Não Encontrado";
             }
         }
     }
